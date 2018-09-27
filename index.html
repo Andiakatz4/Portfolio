@@ -6,6 +6,8 @@
 	<title>Andia's Portfolio</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -82,7 +84,9 @@
 						<article class="item">
 							<a href="https://andiakatz4.github.io/Project-1-Travel/" target="_blank" class="image fit"><img src="images/carousel.PNG"
 								 alt="" /></a>
-							<header>
+							<header id="popoverOption" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Carousel is a front-end web application which was built by a group of four Web Developers. It is a one stop application which was built for travelers so that they can search for restaurants, hotels and museum in their chosen destination and also gives them the ability to translate their language to a foreign one.
+								 
+								 Languages used: HTML, CSS, Bootstrap, API’s: Google Maps, Google Translate, Google Places Library">
 								<h3>Carousel Travel Application</h3>
 							</header>
 						</article>
@@ -91,7 +95,9 @@
 						<article class="item">
 							<a href="https://travelmate-20180802.herokuapp.com/" target="_blank" class="image fit"><img src="images/travel-mate.png"
 								 alt="" /></a>
-							<header>
+							<header id="popoverOption2" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Travel Mate is a full-stack web application which was created to connect travelers to locals, who want to show them around their town based on mutual interests. It allows you to create a private profile which gives you the ability to search by location, mutual interests, and allows both locals and travelers to search for each other.
+
+							Languages used: HTML, CSS, Bootstrap, JavaScript, jQuery, Express, Handlebars, MySQL, Sequelize">
 								<h3>Travel Mate Full Stack Application</h3>
 							</header>
 						</article>
@@ -100,7 +106,7 @@
 						<article class="item">
 							<a href="https://re-arize.herokuapp.com/welcome" target="_blank" class="image fit"><img src="images/arize.PNG" alt=""
 								/></a>
-							<header>
+							<header id="popoverOption3" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Arize is a full-stack web application built to make organizing your life and connecting with near by people much easier. This one stop application allows you to check your local weather, track your personal calendar, find local events, join and create local groups and create a personal to-do list from your user profile. Languages used: ReactJS, NodeJS and Express Web Server, Mongo DB / Mongoose, JSON Web Tokens, NPM Packages: Flip Move, React Scroll, React Big Calendar">
 								<h3>Arize Full Stack Application</h3>
 							</header>
 						</article>
@@ -116,10 +122,16 @@
 				</header>
 
 				<a class="image.featured"> <img src="images/metoo.png" alt="" style="display: block; margin-left: auto;
-					margin-right: auto;"/></a>
-	
+					margin-right: auto;" /></a>
 
-				<p>I am a Full Stack Web Developer, who is innovative, creative and design focused. I am currently located in San Diego, CA and am a recent graduate of UCSD Extension's Coding Bootcamp. Here I gained the extensive knowledge of working with HTML, CSS, Bootstrap, JavaScript, jQuery, API's, AJAX, Firebase, Express.js, Handlebars.js, MySQL, Sequelize.js, Node.js, MongoDB, Mongoose, React, Java, Github and Heroku. I also have an undergraduate degree in Hospitality and Tourism Management and a minor in Business Admnistration from San Francisco State Univeristy. <br> <br>I am aiming to combine my skills of Hospitality and Web Development to create extrodinary web applications, while growing with an organization where I can enhance my current knowledge and implement new technologies for the betterment of the organization. </p>
+
+				<p>I am a Full Stack Web Developer, who is innovative, creative and design focused. I am currently located in San Diego,
+					CA and am a recent graduate of UCSD Extension's Coding Bootcamp. Here I gained the extensive knowledge of working with
+					HTML, CSS, Bootstrap, JavaScript, jQuery, API's, AJAX, Firebase, Express.js, Handlebars.js, MySQL, Sequelize.js, Node.js,
+					MongoDB, Mongoose, React, Java, Github and Heroku. I also have an undergraduate degree in Hospitality and Tourism Management
+					and a minor in Business Admnistration from San Francisco State Univeristy. <br> <br>I am aiming to combine my skills
+					of Hospitality and Web Development to create extrodinary web applications, while growing with an organization where
+					I can enhance my current knowledge and implement new technologies for the betterment of the organization. </p>
 
 			</div>
 		</section>
@@ -146,11 +158,11 @@
 						<div class="col-12">
 							<textarea name="message" placeholder="Message"></textarea>
 						</div> -->
-						<div class="col-12">
-							<input type="submit" value="Send Message" />
-						</div>
+					<div class="col-12">
+						<input type="submit" value="Send Message" />
 					</div>
-				</form>
+			</div>
+			</form>
 
 			</div>
 		</section>
@@ -176,6 +188,24 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		 crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		 crossorigin="anonymous"></script>
+
+		<script>
+			$(function () {
+				$("[data-toggle='popover'").popover();
+			});
+			$('#popoverOption').popover({ trigger: "hover" });
+			$('#popoverOption2').popover({ trigger: "hover" });
+			$('#popoverOption3').popover({ trigger: "hover" });
+			$(".popover-dismiss").popover(
+				{
+					trigger: "focus"
+				});
+		</script>
 
 </body>
 
